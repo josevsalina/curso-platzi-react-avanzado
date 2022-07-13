@@ -7,7 +7,6 @@ export const PhotoCardWithQuery = ({ detailId }) => {
   const { loading, error, data } = useQuery(PHOTO_BY_ID, {
     variables: { id: detailId }
   })
-  console.log(data)
   if (loading) return 'Loading...'
   if (error) return 'Error D:'
   return (

@@ -13,7 +13,6 @@ export function useNearScreen () {
       const observer = new window.IntersectionObserver(function (entries) {
         const { isIntersecting } = entries[0]
         if (isIntersecting) {
-          console.log('si')
           setShow(true)
           observer.disconnect()
         }
