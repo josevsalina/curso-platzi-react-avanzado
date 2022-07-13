@@ -4,6 +4,7 @@ import { useQuery } from '@apollo/client'
 import { PHOTO_BY_ID } from '../hoc/photoById.query'
 
 export const PhotoCardWithQuery = ({ detailId }) => {
+  console.log(detailId)
   const { loading, error, data } = useQuery(PHOTO_BY_ID, {
     variables: { id: detailId }
   })
