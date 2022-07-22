@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import { Layout } from '../components/Layout/Layout'
 import { PhotoCardWithQuery } from '../container/PhotoCardWithQuery'
 
-export const Detail = () => {
+const Detail = () => {
   const params = useParams()
 
   return (
@@ -12,3 +12,5 @@ export const Detail = () => {
     </Layout>
   )
 }
+
+export default Detail

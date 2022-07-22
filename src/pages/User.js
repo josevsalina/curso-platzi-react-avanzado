@@ -3,7 +3,7 @@ import { Layout } from '../components/Layout/Layout'
 import { Button } from '../components/UserForm/styles'
 import { AppContext } from '../hooks/useContext'
 
-export const User = () => {
+const User = () => {
   const { removeAuth } = useContext(AppContext)
   return (
     <>
@@ -13,3 +13,5 @@ export const User = () => {
     </>
   )
 }
+
+export default User

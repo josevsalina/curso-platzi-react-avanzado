@@ -10,7 +10,7 @@ export const ListOfPhotoCards = ({ categoryId }) => {
   if (loading) return 'Loading...'
   if (error) return 'Error D:'
   return (
-    <ul>
+    <ul style={{ 'margin-bottom': '60px' }}>
       {
         data.photos.map(photo => (
           <li key={photo.id}><PhotoCard {...photo} /></li>

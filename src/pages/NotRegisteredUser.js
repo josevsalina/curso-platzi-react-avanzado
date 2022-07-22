@@ -6,7 +6,7 @@ import { AppContext } from '../hooks/useContext'
 import { useLoginMutation } from '../hooks/useLoginMutation'
 import { useRegisterMutation } from '../hooks/useRegisterMutation'
 
-export const NotRegisteredUser = () => {
+const NotRegisteredUser = () => {
   const { activateAuth } = useContext(AppContext)
   const { registerMutation, error, loading } = useRegisterMutation()
   const { login, loading: loadingLogin, error: errorLogin } = useLoginMutation()
@@ -59,3 +59,5 @@ export const NotRegisteredUser = () => {
     </>
   )
 }
+
+export default NotRegisteredUser

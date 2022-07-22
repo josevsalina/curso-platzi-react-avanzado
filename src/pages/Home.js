@@ -4,13 +4,13 @@ import { ListOfPhotoCards } from '../container/ListOfPhotoCards'
 import { useParams } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 
-export const Home = () => {
+const Home = () => {
   const params = useParams()
 
   return (
     <>
       <Helmet>
-        <title>Petgram! tu app de fotos de mascotas</title>
+        <title>🐶 Petgram! tu app de fotos de mascotas</title>
         <meta name='description' content='Con petgram puedes encontrar fotos de animales lindos' />
       </Helmet>
       <ListOfCategories />
@@ -18,3 +18,4 @@ export const Home = () => {
     </>
   )
 }
+export default Home
