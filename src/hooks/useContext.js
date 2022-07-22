@@ -3,7 +3,7 @@ import { useSessionStorage } from './useSessionStorage'
 
 const AppContext = createContext(null)
 
-const AppProvider = (props) => {
+const AppProvider = ({ client, ...props }) => {
   const [token, setToken] = useSessionStorage('token', null)
   const [isAuth, setIsAuth] = useState((token))
 
@@ -12,8 +12,14 @@ const AppProvider = (props) => {
     setToken(jwt)
   }
 
+  const removeAuth = () => {
+    setIsAuth(false)
+    setToken(null)
+    window.sessionStorage.removeItem('token')
+  }
+
   return (
-    <AppContext.Provider value={{ isAuth, token, activateAuth }}>
+    <AppContext.Provider value={{ isAuth, token, activateAuth, removeAuth }}>
       {props.children}
     </AppContext.Provider>
   )

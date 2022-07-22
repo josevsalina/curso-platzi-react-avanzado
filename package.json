@@ -27,6 +27,7 @@
     "intersection-observer": "^0.12.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-helmet": "^6.1.0",
     "react-icons": "^4.4.0",
     "react-router-dom": "^6.3.0",
     "styled-components": "^4.3.1"
